@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BlendIT-Test</string>
+    <string name="registrar_usuario">Registrar Usuário</string>
+    <string name="nome">Nome</string>
+    <string name="idade">Idade</string>
+    <string name="telefone">Telefone</string>
+    <string name="endereco">Endereço</string>
+    <string name="registrar">Registrar</string>
+    <string name="cep">CEP</string>
+    <string name="pesquisar_cep">Pesquisar CEP</string>
+</resources>
