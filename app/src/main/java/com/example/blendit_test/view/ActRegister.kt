@@ -1,9 +1,11 @@
 package com.example.blendit_test.view
 
 import android.widget.Toast
+import com.example.blendit_test.R
 import com.example.blendit_test.base.ActBind
 import com.example.blendit_test.custom.activity
 import com.example.blendit_test.custom.onClick
+import com.example.blendit_test.custom.toast
 import com.example.blendit_test.custom.viewBind
 import com.example.blendit_test.databinding.ActRegisterBinding
 import com.example.blendit_test.presenter.ActRegisterPresenter
@@ -23,7 +25,7 @@ class ActRegister : ActBind<ActRegisterBinding>(), ActRegisterPresenter.View{
                 telInput.text.isNullOrBlank()||
                 addressInput.text.isNullOrBlank()){
 
-
+                toast(context.getString(R.string.fill_spaces))
 
             }
             else{

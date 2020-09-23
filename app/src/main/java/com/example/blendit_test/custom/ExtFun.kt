@@ -6,6 +6,7 @@ import android.content.ContextWrapper
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Toast
 import androidx.viewbinding.ViewBinding
 import com.example.blendit_test.base.ContextFinder
 
@@ -38,3 +39,5 @@ fun View.onClick(function: KFunction0<*>) = setOnClickListener { function() }
 fun View.onClickStart(kClass: KClass<out Activity>) = setOnClickListener {
     context.startActivity(Intent(context, kClass.java))
 }
+
+fun View.toast(message: String) = Toast.makeText(context, message, Toast.LENGTH_LONG).show()
