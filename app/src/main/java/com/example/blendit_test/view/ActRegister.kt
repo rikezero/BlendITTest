@@ -36,6 +36,19 @@ class ActRegister : ActBind<ActRegisterBinding>(), ActRegisterPresenter.View{
                     addressInput.text.toString())
             }
         }
+        cepBtn.onClick {
+            when {
+                cepInput.text.isNullOrBlank() -> {
+                    toast(context.getString(R.string.fillCEP))
+                }
+                cepInput.text.toString().length != 8 -> {
+                    toast(context.getString(R.string.CEPsize))
+                }
+                else -> {
+                    TODO("API CALL")
+                }
+            }
+        }
     }
 
 }

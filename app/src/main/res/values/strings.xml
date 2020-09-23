@@ -9,4 +9,6 @@
     <string name="cep">CEP</string>
     <string name="pesquisar_cep">Pesquisar CEP</string>
     <string name="fill_spaces">Preencha todos campos corretamente</string>
+    <string name="fillCEP">Preencha corretamente o CEP</string>
+    <string name="CEPsize">O CEP deve conter precisamente 8 digitos sem espaços</string>
 </resources>
