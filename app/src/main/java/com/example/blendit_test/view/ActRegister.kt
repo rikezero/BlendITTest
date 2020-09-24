@@ -45,7 +45,7 @@ class ActRegister : ActBind<ActRegisterBinding>(), ActRegisterPresenter.View{
                     toast(context.getString(R.string.CEPsize))
                 }
                 else -> {
-                    TODO("API CALL")
+                    presenter.apiCall(cepInput.text.toString().trim())
                 }
             }
         }

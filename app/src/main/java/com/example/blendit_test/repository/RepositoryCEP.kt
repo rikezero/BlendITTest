@@ -9,12 +9,8 @@ class RepositoryCEP {
     private var service = ServiceCEP::class
     private val serviceCEP = RetroInit(url).create(service)
 
-
     suspend fun getCEP(cep: String): CEPResponse {
         return serviceCEP.getCEPResponse(cep)
     }
-
-
-
 
 }

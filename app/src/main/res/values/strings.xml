@@ -11,4 +11,6 @@
     <string name="fill_spaces">Preencha todos campos corretamente</string>
     <string name="fillCEP">Preencha corretamente o CEP</string>
     <string name="CEPsize">O CEP deve conter precisamente 8 digitos sem espaços</string>
+    <string name="RegSuc">Cadastro Realizado Com Sucesso!</string>
+    <string name="regUsers">Usuários Cadastrados.</string>
 </resources>

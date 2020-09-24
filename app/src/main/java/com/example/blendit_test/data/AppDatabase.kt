@@ -25,7 +25,6 @@ object DatabaseBuilder {
             context.applicationContext,
             AppDatabase::class.java, "database"
         )
-        database.createFromAsset("database/db_cards.db")
         database.allowMainThreadQueries()
         val appDatabase = database.build()
         instance = appDatabase
