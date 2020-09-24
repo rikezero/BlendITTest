@@ -1,5 +1,6 @@
 package com.example.blendit_test.presenter
 
+import android.view.View
 import com.example.blendit_test.R
 import com.example.blendit_test.custom.toast
 import com.example.blendit_test.model.User
@@ -18,7 +19,7 @@ class ActRegisterPresenter(view: View ) {
 
     fun registerUser(name:String,age:String,tel:String,addr:String){
         repository.addUser(User(name,age,tel,addr))
-        (viewRegister as android.view.View).toast(context.getString(R.string.RegSuc))
+        (viewRegister as ActRegister).binding.registerBtn.toast(context.getString(R.string.RegSuc))
     }
 
     fun apiCall(cep: String) = CoroutineScope(Dispatchers.Default).launch {

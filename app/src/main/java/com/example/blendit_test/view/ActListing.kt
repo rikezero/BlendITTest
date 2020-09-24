@@ -30,4 +30,10 @@ class ActListing : ActBind<ActListingBinding>(), ActListingPresenter.View{
 
     }
 
+    fun updateAdapter(){
+        users.clear()
+        presenter.getUsers()
+        binding.userRecycler.adapter?.notifyDataSetChanged()
+    }
+
 }

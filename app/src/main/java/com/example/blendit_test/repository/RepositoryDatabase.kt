@@ -20,4 +20,8 @@ class RepositoryDatabase(context: Context) {
     fun updateUser(user: User){
         accessUser.insert(user)
     }
+
+    fun deleteUser(user: User){
+        accessUser.delete(user)
+    }
 }
