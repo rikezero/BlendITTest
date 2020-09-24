@@ -15,4 +15,7 @@
     <string name="regUsers">Usuários Cadastrados.</string>
     <string name="userListing">Consultar Usuário</string>
     <string name="cadastro_usuarios">Cadastro de Usuários</string>
+    <string name="updateUser">Atualizar Cadastro</string>
+    <string name="updateSuc">Cadastro Atualizado Com Sucesso!</string>
+    <string name="update">Atualizar</string>
 </resources>

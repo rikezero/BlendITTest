@@ -30,6 +30,11 @@ class ActListing : ActBind<ActListingBinding>(), ActListingPresenter.View{
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        updateAdapter()
+    }
+
     fun updateAdapter(){
         users.clear()
         presenter.getUsers()

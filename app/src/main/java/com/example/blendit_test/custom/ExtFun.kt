@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
@@ -41,3 +42,8 @@ fun View.onClickStart(kClass: KClass<out Activity>) = setOnClickListener {
 }
 
 fun View.toast(message: String) = Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+
+fun <T : Any> Context.launchActivity(clazz: Class<T>, extras: Bundle.() -> Unit = {}) {
+    val intent = Intent(this, clazz)
+    startActivity(intent.putExtras(Bundle().apply(extras)))
+}

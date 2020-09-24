@@ -1,14 +1,13 @@
 package com.example.blendit_test.recycler
 
-
 import com.example.blendit_test.custom.ItemViewBuilder
+import com.example.blendit_test.custom.launchActivity
 import com.example.blendit_test.custom.onClick
 import com.example.blendit_test.databinding.UserItemBinding
-
 import com.example.blendit_test.model.User
 import com.example.blendit_test.repository.RepositoryDatabase
 import com.example.blendit_test.view.ActListing
-
+import com.example.blendit_test.view.ActUpdate
 
 class ItemViewUsers : ItemViewBuilder<User, UserItemBinding>() {
 
@@ -23,6 +22,9 @@ class ItemViewUsers : ItemViewBuilder<User, UserItemBinding>() {
                 RepositoryDatabase(context).deleteUser(this@run)
                 (context as ActListing).updateAdapter()
             }
+            itemEdit.onClick { context.launchActivity(ActUpdate::class.java){
+                putParcelable("USER",this@run)
+            } }
         }
 
     }
